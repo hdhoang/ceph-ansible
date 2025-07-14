@@ -87,19 +87,19 @@ options:
 EXAMPLES = '''
 
 - name: info cephx key
-  ceph_key:
+  ceph_key_info:
     name: "my_key""
     state: info
 
 - name: info cephx admin key (plain)
-  ceph_key:
+  ceph_key_info:
     name: client.admin
     output_format: plain
     state: info
   register: client_admin_key
 
 - name: list cephx keys
-  ceph_key:
+  ceph_key_info:
     state: list
 '''
 
